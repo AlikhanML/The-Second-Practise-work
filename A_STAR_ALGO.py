@@ -28,10 +28,10 @@ def a_star_algo(graph, h, start, goal):
         return traversal_order, path, g
       for neighbor, weight in graph.get(current_person, {}).items():
         if neighbor not in visited:
-          g_new = g + weight  # Жіберілген нақты құн (g)
+          g_new = g + weight  
           h_new = h.get(
               neighbor, 0 )
-          f_new = g_new + h_new  # f = g + h
+          f_new = g_new + h_new  
 
           heapq.heappush(pq, (f_new, g_new, neighbor, path + [neighbor]))
 
