@@ -13,14 +13,14 @@ network = {
 def bfs_algo(network, start, goal):
   queue = deque([(start, [start])])
   visited = {start}
-  traversal_order = []  # 1. Барлық тексерілген адамдарды сақтайтын тізім
+  traversal_order = [] 
 
   while queue:
     current_person, path = queue.popleft()
-    traversal_order.append(current_person)  # 2. Тексеріліп жатқан адамды тіркеу
+    traversal_order.append(current_person)  
 
     if current_person == goal:
-      return traversal_order, path  # Екеуін де қайтарамыз
+      return traversal_order, path  
 
     for friend in network.get(current_person, []):
       if friend not in visited:
